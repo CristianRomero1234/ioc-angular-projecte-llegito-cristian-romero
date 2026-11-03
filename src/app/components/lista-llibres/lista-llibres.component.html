@@ -1,0 +1,21 @@
+<section class="list-section">
+  <div class="results-info" aria-live="polite" role="status">
+    Comptador de resultats: <strong>{{ llibres.length }}</strong> llibres trobats
+  </div>
+
+  @if (llibres.length > 0) {
+    <div class="grid-targetes">
+      @for (llibre of llibres; track llibre.id) {
+        <app-llibre 
+          [llibre]="llibre" 
+          [seleccionat]="llibre === llibreSeleccionat"
+          (seleccionar)="onSeleccionar($event)" 
+        />
+      }
+    </div>
+  } @else {
+    <div class="no-results" role="alert">
+      <p>No s'ha trobat cap element que coincideixi amb els criteris de cerca.</p>
+    </div>
+  }
+</section>

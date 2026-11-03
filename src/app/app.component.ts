@@ -1,12 +1,37 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { Llibre } from './models/llibre/llibre.model';
+import { LLIBRES_MOCK } from './data/llibre/llibres.mock';
+import { ListaLlibresComponent } from './components/lista-llibres/lista-llibres.component';
+import { FiltresLlibreComponent } from './components/filtres-llibre/filtres-llibre.component';
 
 @Component({
-  imports: [RouterOutlet],
   selector: 'app-root',
-  styleUrl: './app.component.scss',
+  imports: [CommonModule, RouterOutlet, ListaLlibresComponent, FiltresLlibreComponent],
   templateUrl: './app.component.html',
+  styleUrl: './app.component.scss'
 })
 export class App {
-  public nomAplicacio = "Projecte Base";
+  nomAplicacio = 'Llegito - Gestor de Lectures';
+  llibres: Llibre[] = LLIBRES_MOCK;
+  llibresFiltrats: Llibre[] = LLIBRES_MOCK;
+  llibreSeleccionat?: Llibre;
+
+  aplicarFiltres(filtre: { text: string; categoria: string }) {
+    this.llibresFiltrats = this.llibres.filter(llibre => {
+      const matchText = llibre.titol.toLowerCase().includes(filtre.text.toLowerCase());
+      const matchCat = filtre.categoria ? llibre.categoria === filtre.categoria : true;
+      return matchText && matchCat;
+    });
+  }
+
+  restablirFiltres() {
+    this.llibresFiltrats = [...this.llibres];
+    this.llibreSeleccionat = undefined;
+  }
+
+  seleccionarLlibre(llibre: Llibre) {
+    this.llibreSeleccionat = llibre;
+  }
 }

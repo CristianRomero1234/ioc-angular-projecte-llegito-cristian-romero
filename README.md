@@ -1,11 +1,11 @@
 # Nom de l'aplicació
-Projecte Angular Base
+Projecte Llegito
 
 ## Autor/a
 Cristian Romero
 
 ## Descripció
-Projecte base amb Angular del mòdul DA2_OA01
+Projecte Llegito amb Angular del mòdul DA2_OA01. Llegito és una aplicació web personal d'Angular per gestionar i registrar lectures, combinant el seguiment de llibres llegits amb una llista de desitjos (wishlist)
 
 ## Versions utilitzades
 - node --version    : v24.21.0
@@ -27,3 +27,4 @@ Desenvolupament.
 ## Enllaç del repositori
 - *main*        : https://github.com/CristianRomero1234/ioc-angular-projecte-base-cristian-romero/tree/main
 - *ra1-setup*   : https://github.com/CristianRomero1234/ioc-angular-projecte-base-cristian-romero/tree/ra1-setup
+- *ra2-components* : https://github.com/CristianRomero1234/ioc-angular-projecte-base-cristian-romero/tree/ra2-components
