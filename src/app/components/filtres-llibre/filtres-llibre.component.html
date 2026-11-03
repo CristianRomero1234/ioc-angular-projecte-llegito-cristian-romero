@@ -1,0 +1,35 @@
+<form #filtresForm="ngForm" (ngSubmit)="onApplyFilter()" class="filter-form">
+<div class="form-group">
+  <label for="textCerca">Cerca per títol:</label>
+  <input 
+    type="text" 
+    id="textCerca" 
+    name="textCerca" 
+    minlength="3" 
+    [(ngModel)]="textCerca" 
+    #textInput="ngModel"
+    placeholder="Escriu mínim 3 caràcters..."
+  />
+  
+  @if (textInput.errors?.['minlength'] && textInput.dirty) {
+    <div class="error-message" role="alert">
+      <span>La longitud mínima és de 3 caràcters.</span>
+    </div>
+  }
+</div>
+
+  <div class="form-group">
+    <label for="categoria">Categoria:</label>
+    <select id="categoria" name="categoria" [(ngModel)]="categoriaSeleccionada">
+      <option value="">Totes</option>
+      <option value="Wishlist">Wishlist</option>
+      <option value="Llegit">Llegit</option>
+      <option value="Pendent">Pendent</option>
+    </select>
+  </div>
+
+  <div class="form-actions">
+    <button type="submit" [disabled]="filtresForm.invalid">Aplicar Filtres</button>
+    <button type="button" (click)="onReset()">Restablir</button>
+  </div>
+</form>
