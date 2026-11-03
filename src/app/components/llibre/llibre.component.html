@@ -1,0 +1,11 @@
+<div class="card" [class.selected]="seleccionat" (click)="onSelect()" tabindex="0" (keyup.enter)="onSelect()">
+  <div class="card-header">
+    <h3>{{ llibre.titol }}</h3>
+    <app-etiqueta-estat [categoria]="llibre.categoria" />
+  </div>
+  <p>{{ llibre.descripcioBreu }}</p>
+  <div class="card-footer">
+    <small>Adquisició: {{ llibre.dataAdquisicio | date:'dd/MM/yyyy' }}</small>
+    <small>{{ llibre.numeroPagines }} pàgines</small>
+  </div>
+</div>
