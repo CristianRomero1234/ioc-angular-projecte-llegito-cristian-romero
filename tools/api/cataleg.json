@@ -7,7 +7,8 @@
       "categoria": "Llegit",
       "dataAdquisicio": "2024-01-15",
       "numeroPagines": 640,
-      "isDestacat": true
+      "isDestacat": true,
+      "imatge": "https://placehold.co/300x200?text=El+món+de+Sofia"
     },
     {
       "id": 2,
@@ -16,7 +17,8 @@
       "categoria": "Pendent",
       "dataAdquisicio": "2024-02-10",
       "numeroPagines": 550,
-      "isDestacat": false
+      "isDestacat": false,
+      "imatge": "https://placehold.co/300x200?text=Crim+i+càstig"
     },
     {
       "id": 3,
@@ -25,7 +27,8 @@
       "categoria": "Llegit",
       "dataAdquisicio": "2023-11-20",
       "numeroPagines": 600,
-      "isDestacat": true
+      "isDestacat": true,
+      "imatge": "https://placehold.co/300x200?text=La+catedral+del+mar"
     },
     {
       "id": 4,
@@ -34,7 +37,8 @@
       "categoria": "Llegit",
       "dataAdquisicio": "2023-09-05",
       "numeroPagines": 320,
-      "isDestacat": true
+      "isDestacat": true,
+      "imatge": "https://placehold.co/300x200?text=1984"
     },
     {
       "id": 5,
@@ -43,7 +47,8 @@
       "categoria": "Wishlist",
       "dataAdquisicio": "2026-03-01",
       "numeroPagines": 496,
-      "isDestacat": false
+      "isDestacat": false,
+      "imatge": "https://placehold.co/300x200?text=Sapiens+Dels+animals+als+déus"
     },
     {
       "id": 6,
@@ -52,7 +57,8 @@
       "categoria": "Llegit",
       "dataAdquisicio": "2023-05-12",
       "numeroPagines": 96,
-      "isDestacat": false
+      "isDestacat": false,
+      "imatge": "https://placehold.co/300x200?text=El+petit+príncep"
     },
     {
       "id": 7,
@@ -61,7 +67,8 @@
       "categoria": "Wishlist",
       "dataAdquisicio": "2026-03-02",
       "numeroPagines": 270,
-      "isDestacat": false
+      "isDestacat": false,
+      "imatge": "https://placehold.co/300x200?text=Neuromant"
     },
     {
       "id": 8,
@@ -70,7 +77,8 @@
       "categoria": "Llegit",
       "dataAdquisicio": "2023-08-14",
       "numeroPagines": 576,
-      "isDestacat": true
+      "isDestacat": true,
+      "imatge": "https://placehold.co/300x200?text=La+sombra+del+viento"
     },
     {
       "id": 9,
@@ -79,7 +87,8 @@
       "categoria": "Pendent",
       "dataAdquisicio": "2024-01-30",
       "numeroPagines": 412,
-      "isDestacat": false
+      "isDestacat": false,
+      "imatge": "https://placehold.co/300x200?text=Duna"
     },
     {
       "id": 10,
@@ -88,7 +97,8 @@
       "categoria": "Wishlist",
       "dataAdquisicio": "2026-03-03",
       "numeroPagines": 158,
-      "isDestacat": false
+      "isDestacat": false,
+      "imatge": "https://placehold.co/300x200?text=Fahrenheit+451"
     }
   ]
 }

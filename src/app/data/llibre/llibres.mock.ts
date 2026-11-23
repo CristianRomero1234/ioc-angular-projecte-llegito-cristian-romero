@@ -2,93 +2,103 @@ import { Llibre } from '../../models/llibre/llibre.model';
 
 export const LLIBRES_MOCK: Llibre[] = [
   {
-    id: 1,
+    id: "1",
     titol: 'El món de Sofia',
     descripcioBreu: 'Una novel·la sobre la història de la filosofia.',
     categoria: 'Llegit',
-    dataAdquisicio: '2024-01-15',
+    dataAdquisicio: new Date('2024-01-15'),
     numeroPagines: 640,
-    isDestacat: true
+    isDestacat: true,
+    imatge: 'https://placehold.co/300x200?text=El+món+de+Sofia'
   },
   {
-    id: 2,
+    id: "2",
     titol: 'Crim i càstig',
     descripcioBreu: 'Clàssic de la literatura russa sobre la moralitat i la culpa.',
     categoria: 'Pendent',
-    dataAdquisicio: '2024-02-10',
+    dataAdquisicio: new Date('2024-02-10'),
     numeroPagines: 550,
-    isDestacat: false
+    isDestacat: false,
+    imatge: 'https://placehold.co/300x200?text=Crim+i+càstig'
   },
   {
-    id: 3,
+    id: "3",
     titol: 'La catedral del mar',
     descripcioBreu: 'Història ambientada a la Barcelona del segle XIV.',
     categoria: 'Llegit',
-    dataAdquisicio: '2023-11-20',
+    dataAdquisicio: new Date('2023-11-20'),
     numeroPagines: 600,
-    isDestacat: true
+    isDestacat: true,
+    imatge: 'https://placehold.co/300x200?text=La+catedral+del+mar'
   },
   {
-    id: 4,
+    id: "4",
     titol: '1984',
     descripcioBreu: 'Distopia clàssica sobre el totalitarisme i la vigilància.',
     categoria: 'Llegit',
-    dataAdquisicio: '2023-09-05',
+    dataAdquisicio: new Date('2023-09-05'),
     numeroPagines: 320,
-    isDestacat: true
+    isDestacat: true,
+    imatge: 'https://placehold.co/300x200?text=1984'
   },
   {
-    id: 5,
+    id: "5",
     titol: 'Sapiens: Dels animals als déus',
     descripcioBreu: 'Breu història de la humanitat.',
     categoria: 'Wishlist',
-    dataAdquisicio: '2026-03-01',
+    dataAdquisicio: new Date('2026-03-01'),
     numeroPagines: 496,
-    isDestacat: false
+    isDestacat: false,
+    imatge: 'https://placehold.co/300x200?text=Sapiens+Dels+animals+als+déus'
   },
   {
-    id: 6,
+    id: "6",
     titol: 'El petit príncep',
     descripcioBreu: 'Conte poètic i filosòfic.',
     categoria: 'Llegit',
-    dataAdquisicio: '2023-05-12',
+    dataAdquisicio: new Date('2023-05-12'),
     numeroPagines: 96,
-    isDestacat: false
+    isDestacat: false,
+    imatge: 'https://placehold.co/300x200?text=El+petit+príncep'
   },
   {
-    id: 7,
+    id: "7",
     titol: 'Neuromant',
     descripcioBreu: 'Obra mestra del cyberpunk.',
     categoria: 'Wishlist',
-    dataAdquisicio: '2026-03-02',
+    dataAdquisicio: new Date('2026-03-02'),
     numeroPagines: 270,
-    isDestacat: false
+    isDestacat: false,
+    imatge: 'https://placehold.co/300x200?text=Neuromant'
   },
   {
-    id: 8,
+    id: "8",
     titol: 'La sombra del viento',
-    descripcioBreu: 'Misteri i llibres oblidats a Barcelona.',
+    descripcioBreu: 'Misteri i llibres oblidat"s" a Barcelona.',
     categoria: 'Llegit',
-    dataAdquisicio: '2023-08-14',
+    dataAdquisicio: new Date('2023-08-14'),
     numeroPagines: 576,
-    isDestacat: true
+    isDestacat: true,
+    imatge: 'https://placehold.co/300x200?text=La+sombra+del+viento'
   },
   {
-    id: 9,
+    id: "9",
     titol: 'Duna',
     descripcioBreu: 'Èpica de ciència-ficció al planeta Arrakis.',
     categoria: 'Pendent',
-    dataAdquisicio: '2024-01-30',
+    dataAdquisicio: new Date('2024-01-30'),
     numeroPagines: 412,
-    isDestacat: false
+    isDestacat: false,
+    imatge: 'https://placehold.co/300x200?text=Duna'
   },
   {
-    id: 10,
+    id: "10",
     titol: 'Fahrenheit 451',
     descripcioBreu: 'Un món on els llibres estan prohibits.',
     categoria: 'Wishlist',
-    dataAdquisicio: '2026-03-03',
+    dataAdquisicio: new Date('2026-03-03'),
     numeroPagines: 158,
-    isDestacat: false
+    isDestacat: false,
+    imatge: 'https://placehold.co/300x200?text=Fahrenheit+451'
   }
 ];

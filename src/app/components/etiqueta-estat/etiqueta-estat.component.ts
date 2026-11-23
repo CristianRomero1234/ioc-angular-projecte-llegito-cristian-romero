@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './etiqueta-estat.component.scss'
 })
 export class EtiquetaEstatComponent {
-  @Input({ required: true }) categoria!: 'Wishlist' | 'Llegit' | 'Pendent';
+  @Input({ required: true }) categoria!: string;
 }
