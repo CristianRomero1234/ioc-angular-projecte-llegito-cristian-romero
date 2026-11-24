@@ -12,16 +12,7 @@ import { LlibreService } from '../../services/llibre.service';
 export class FormulariNouElementComponent {
   private readonly llibreService = inject(LlibreService);
 
-  readonly categories = [
-    'Electrònica',
-    'Sensors',
-    'Motors',
-    'Pantalles',
-    'Comunicació',
-    'Components',
-    'Prototipatge',
-    'Il·luminació',
-  ];
+  readonly categories = ['Wishlist', 'Llegit', 'Pendent'];
 
   readonly formulari = new FormGroup({
     titol: new FormControl('', {
@@ -39,8 +30,7 @@ export class FormulariNouElementComponent {
     numeroPagines: new FormControl(0, {
       nonNullable: true,
       validators: [Validators.required, Validators.min(0)],
-    }),
-    imatge: new FormControl('', { nonNullable: true, validators: [Validators.required] }),
+    })
   });
 
   readonly enviant = signal(false);
@@ -70,7 +60,7 @@ export class FormulariNouElementComponent {
     });
   }
 
-  teError(control: 'titol' | 'descripcioBreu' | 'categoria' | 'numeroPagines' | 'imatge'): boolean {
+  teError(control: 'titol' | 'descripcioBreu' | 'categoria' | 'numeroPagines' ): boolean {
     const c = this.formulari.controls[control];
     return c.invalid && (c.dirty || c.touched);
   }

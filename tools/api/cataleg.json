@@ -1,7 +1,7 @@
 {
   "elements": [
     {
-      "id": 1,
+      "id": "1",
       "titol": "El món de Sofia",
       "descripcioBreu": "Una novel·la sobre la història de la filosofia.",
       "categoria": "Llegit",
@@ -11,7 +11,7 @@
       "imatge": "https://placehold.co/300x200?text=El+món+de+Sofia"
     },
     {
-      "id": 2,
+      "id": "2",
       "titol": "Crim i càstig",
       "descripcioBreu": "Clàssic de la literatura russa sobre la moralitat i la culpa.",
       "categoria": "Pendent",
@@ -21,7 +21,7 @@
       "imatge": "https://placehold.co/300x200?text=Crim+i+càstig"
     },
     {
-      "id": 3,
+      "id": "3",
       "titol": "La catedral del mar",
       "descripcioBreu": "Història ambientada a la Barcelona del segle XIV.",
       "categoria": "Llegit",
@@ -31,7 +31,7 @@
       "imatge": "https://placehold.co/300x200?text=La+catedral+del+mar"
     },
     {
-      "id": 4,
+      "id": "4",
       "titol": "1984",
       "descripcioBreu": "Distopia clàssica sobre el totalitarisme i la vigilància.",
       "categoria": "Llegit",
@@ -41,7 +41,7 @@
       "imatge": "https://placehold.co/300x200?text=1984"
     },
     {
-      "id": 5,
+      "id": "5",
       "titol": "Sapiens: Dels animals als déus",
       "descripcioBreu": "Breu història de la humanitat.",
       "categoria": "Wishlist",
@@ -51,7 +51,7 @@
       "imatge": "https://placehold.co/300x200?text=Sapiens+Dels+animals+als+déus"
     },
     {
-      "id": 6,
+      "id": "6",
       "titol": "El petit príncep",
       "descripcioBreu": "Conte poètic i filosòfic.",
       "categoria": "Llegit",
@@ -61,7 +61,7 @@
       "imatge": "https://placehold.co/300x200?text=El+petit+príncep"
     },
     {
-      "id": 7,
+      "id": "7",
       "titol": "Neuromant",
       "descripcioBreu": "Obra mestra del cyberpunk.",
       "categoria": "Wishlist",
@@ -71,7 +71,7 @@
       "imatge": "https://placehold.co/300x200?text=Neuromant"
     },
     {
-      "id": 8,
+      "id": "8",
       "titol": "La sombra del viento",
       "descripcioBreu": "Misteri i llibres oblidats a Barcelona.",
       "categoria": "Llegit",
@@ -81,7 +81,7 @@
       "imatge": "https://placehold.co/300x200?text=La+sombra+del+viento"
     },
     {
-      "id": 9,
+      "id": "9",
       "titol": "Duna",
       "descripcioBreu": "Èpica de ciència-ficció al planeta Arrakis.",
       "categoria": "Pendent",
@@ -91,7 +91,7 @@
       "imatge": "https://placehold.co/300x200?text=Duna"
     },
     {
-      "id": 10,
+      "id": "10",
       "titol": "Fahrenheit 451",
       "descripcioBreu": "Un món on els llibres estan prohibits.",
       "categoria": "Wishlist",
@@ -99,6 +99,16 @@
       "numeroPagines": 158,
       "isDestacat": false,
       "imatge": "https://placehold.co/300x200?text=Fahrenheit+451"
+    },
+    {
+      "titol": "Test",
+      "descripcioBreu": "Test nou Element",
+      "categoria": "Wishlist",
+      "numeroPagines": 100,
+      "imatge": "https://placehold.co/300x200?text=Test",
+      "destacat": false,
+      "id": "_Q_QEJe_RXw"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

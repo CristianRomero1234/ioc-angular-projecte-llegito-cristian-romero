@@ -45,4 +45,4 @@ export interface Preferit {
   dataAfegit: string;
 }
 
-export type NouElement = Pick<Llibre, 'titol' | 'descripcioBreu' | 'categoria' | 'numeroPagines' | 'imatge'>;
+export type NouElement = Pick<Llibre, 'titol' | 'descripcioBreu' | 'categoria' | 'numeroPagines'>;

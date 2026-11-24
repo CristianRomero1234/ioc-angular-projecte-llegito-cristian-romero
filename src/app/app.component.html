@@ -1,42 +1,3 @@
-<!-- <a class="skip-link" href="#main-content">Saltar al contingut principal</a>
-
-<header class="app-header">
-  <h1>{{ nomAplicacio }}</h1>
-  <p>Aplicació per gestionar i registrar lectures i wishlist.</p>
-</header>
-
-<main id="main-content" class="container">
-  <section class="filters-section">
-    <h2>Filtres de cerca</h2>
-    <app-filtres-llibre (filtrar)="aplicarFiltres($event)" (restablir)="restablirFiltres()" />
-  </section>
-
-  <div class="content-layout">
-    <app-lista-llibres [llibres]="llibresFiltrats" [llibreSeleccionat]="llibreSeleccionat"
-      (seleccionar)="seleccionarLlibre($event)" />
-
-    <aside class="detail-section">
-      <h2>Panell de detall</h2>
-      @if (llibreSeleccionat) {
-      <div class="detail-card">
-        <h3>{{ llibreSeleccionat.titol }}</h3>
-        <p><strong>Descripció:</strong> {{ llibreSeleccionat.descripcioBreu }}</p>
-        <p><strong>Estat:</strong> {{ llibreSeleccionat.categoria }}</p>
-        <p><strong>Data d'adquisicio:</strong> {{ llibreSeleccionat.dataAdquisicio | date:'fullDate' }}</p>
-        <p><strong>Pàgines:</strong> {{ llibreSeleccionat.numeroPagines }}</p>
-        @if (llibreSeleccionat.isDestacat) {
-        <span class="badge-destacat">Element Destacat</span>
-        }
-      </div>
-      } @else {
-      <p class="placeholder-text">Selecciona un llibre de la lista per veure'n els detalls.</p>
-      }
-    </aside>
-  </div>
-</main>
-
-<router-outlet /> -->
-
 <h1>Prova del servei</h1>
 <p>Fase: {{ llibreService.estat().estat }}</p>
 <p>Elements: {{ llibreService.estat().elements.length }}</p>
@@ -47,3 +8,4 @@
 
 
 <app-cataleg-page/>
+<router-outlet /> 
