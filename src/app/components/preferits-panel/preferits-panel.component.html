@@ -1,0 +1,53 @@
+<div class="preferits-panel">
+  <h2>Els meus preferits ({{ preferitsService.preferits().length }})</h2>
+
+  @if (preferitsService.preferits().length > 0) {
+    <div class="llista-preferits">
+      @for (preferit of preferitsService.preferits(); track preferit.elementId) {
+        <div class="preferit-item" [class.seleccionat]="preferitSeleccionat()?.elementId === preferit.elementId">
+          <button type="button" class="preferit-info" (click)="seleccionarPreferit(preferit)">
+            <h3>{{ preferit.elementNom }}</h3>
+            <p class="notes-count">{{ preferit.notes.length }} notes</p>
+            <p class="data-afegit">Afegit: {{ preferit.dataAfegit | date:'dd/MM/yyyy HH:mm' }}</p>
+          </button>
+          <button type="button" class="btn-eliminar" (click)="eliminarPreferit(preferit.elementId)" aria-label="Elimina dels preferits">🗑️</button>
+        </div>
+      }
+    </div>
+  } @else {
+    <div class="sense-preferits">
+      <p>No tens preferits encara</p>
+      <p class="ajuda">Fes clic a l'estrella d'un element per afegir-lo als preferits</p>
+    </div>
+  }
+
+  @if (preferitSeleccionat(); as preferit) {
+    <div class="panel-notes">
+      <div class="notes-header">
+        <h3>Notes de: {{ preferit.elementNom }}</h3>
+        <button type="button" class="btn-tancar" (click)="tancarPanel()" aria-label="Tanca el panell de notes">✕</button>
+      </div>
+
+      <form [formGroup]="formulariNotes" (ngSubmit)="afegirNota()">
+        <div class="notes-llista" formArrayName="notes">
+          @for (control of notes.controls; track control; let i = $index; let ultima = $last) {
+            <div class="nota-item">
+              <label class="visually-hidden" [for]="'nota-' + i">{{ ultima ? 'Nova nota' : 'Nota ' + (i + 1) }}</label>
+              <input type="text"
+                     [id]="'nota-' + i"
+                     [formControlName]="i"
+                     [placeholder]="ultima ? 'Escriu una nova nota (mínim 3 caràcters)...' : 'Nota ' + (i + 1)"
+                     class="input-nota"
+                     [class.invalid]="control.invalid && control.touched">
+              @if (!ultima) {
+                <button type="button" class="btn-eliminar-nota" (click)="eliminarNota(i)" aria-label="Elimina la nota">✕</button>
+              }
+            </div>
+          }
+        </div>
+
+        <button type="submit" class="btn-afegir-nota" [disabled]="notes.at(notes.length - 1)?.invalid">Afegir nota</button>
+      </form>
+    </div>
+  }
+</div>

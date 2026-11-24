@@ -1,4 +1,4 @@
-<a class="skip-link" href="#main-content">Saltar al contingut principal</a>
+<!-- <a class="skip-link" href="#main-content">Saltar al contingut principal</a>
 
 <header class="app-header">
   <h1>{{ nomAplicacio }}</h1>
@@ -35,4 +35,15 @@
   </div>
 </main>
 
-<router-outlet />
+<router-outlet /> -->
+
+<h1>Prova del servei</h1>
+<p>Fase: {{ llibreService.estat().estat }}</p>
+<p>Elements: {{ llibreService.estat().elements.length }}</p>
+<p>Error: {{ llibreService.estat().error ?? 'cap' }}</p>
+<pre>{{ llibreService.estat().elements[0] | json }}</pre>
+<button type="button" (click)="llibreService.cercar({ terme: '', categoria: 'Wishlist' })">Cerca "wishlist"</button>
+<button type="button" (click)="llibreService.reintentar()">Reintenta</button>
+
+
+<app-cataleg-page/>

@@ -1,0 +1,53 @@
+<form class="formulari-alta" [formGroup]="formulari" (ngSubmit)="crear()" aria-label="Nou element">
+    <h2>Afegir un element</h2>
+
+    <div class="camp">
+        <label for="titol">titol</label>
+        <input id="titol" type="text" formControlName="titol" [class.invalid]="teError('titol')" />
+        @if (teError('titol')) {
+        <p class="missatge-error" role="alert">El titol és obligatori (mínim 3 caràcters).</p>
+        }
+    </div>
+
+    <div class="camp">
+        <label for="descripcioBreu">Descripció</label>
+        <textarea id="descripcioBreu" formControlName="descripcioBreu" rows="2"
+            [class.invalid]="teError('descripcioBreu')"></textarea>
+        @if (teError('descripcioBreu')) {
+        <p class="missatge-error" role="alert">La descripció és obligatòria (mínim 10 caràcters).</p>
+        }
+    </div>
+
+    <div class="fila">
+        <div class="camp">
+            <label for="categoria-nou">Categoria</label>
+            <select id="categoria-nou" formControlName="categoria">
+                @for (categoria of categories; track categoria) {
+                <option [value]="categoria">{{ categoria }}</option>
+                }
+            </select>
+        </div>
+
+        <div class="camp">
+            <label for="numeroPagines">Numero Pagines </label>
+            <input id="numeroPagines" type="number" min="0" formControlName="numeroPagines"
+                [class.invalid]="teError('numeroPagines')" />
+            @if (teError('numeroPagines')) {
+            <p class="missatge-error" role="alert">El numeroPagines ha de ser més gran que 0.</p>
+            }
+        </div>
+    </div>
+
+    <div class="accions">
+        <button type="submit" [disabled]="formulari.invalid || enviant()">
+            {{ enviant() ? 'Enviant...' : 'Crear element' }}
+        </button>
+    </div>
+
+    @if (missatge()) {
+    <p class="missatge-exit" role="status">{{ missatge() }}</p>
+    }
+    @if (error()) {
+    <p class="missatge-error" role="alert">{{ error() }}</p>
+    }
+</form>

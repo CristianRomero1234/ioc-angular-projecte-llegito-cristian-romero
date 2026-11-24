@@ -1,0 +1,66 @@
+<div class="cataleg-page">
+    <header class="page-header">
+        <h1>Catàleg d'Elements</h1>
+        <p class="subtitle">Components electrònics i material de prototipatge</p>
+    </header>
+
+    <app-formulari-cerca (cercaEnviada)="onCerca($event)" />
+
+    @switch (llibreService.estat().estat) {
+    @case ('inicial') {
+    <div class="estat-inicial">
+        <p>Inicialitzant...</p>
+    </div>
+    }
+
+    @case ('carregant') {
+    <div class="estat-carregant" role="status" aria-live="polite">
+        <div class="spinner" aria-hidden="true"></div>
+        <p>Carregant elements...</p>
+    </div>
+    }
+
+    @case ('error') {
+    <div class="estat-error" role="alert">
+        <div class="error-icon" aria-hidden="true">⚠️</div>
+        <h2>Error en carregar els elements</h2>
+        <p class="error-missatge">{{ llibreService.estat().error }}</p>
+        <button type="button" class="btn-reintentar" (click)="reintentar()">Reintentar</button>
+    </div>
+    }
+
+    @case ('exit') {
+    <div class="estat-exit">
+        <div class="elements-grid">
+            @for (element of llibreService.estat().elements; track element.id) {
+            <article class="element-card">
+                <button type="button" class="btn-preferit" [class.actiu]="preferitsService.esPreferit(element.id)"
+                    (click)="togglePreferit(element)"
+                    [attr.aria-label]="preferitsService.esPreferit(element.id) ? 'Treu dels preferits' : 'Afegeix als preferits'"
+                    [attr.aria-pressed]="preferitsService.esPreferit(element.id)">
+                    {{ preferitsService.esPreferit(element.id) ? '★' : '☆' }}
+
+                </button>
+                <img [src]="element.imatge" [alt]="element.titol" class="element-imatge">
+                <div class="element-info">
+                    <h3 class="element-titol">{{ element.titol }}</h3>
+                    <p class="element-categoria">{{ element.categoria }}</p>
+                    <p class="element-descripcioBreu">{{ element.descripcioBreu }}</p>
+                    <div class="element-footer">
+                        <span class="element-numeroPagines">{{ element.numeroPagines }} pgs.</span>
+                        <span class="element-dataAdquisicio">{{ element.dataAdquisicio | date:'dd/MM/yyyy' }}</span>
+                    </div>
+                </div>
+            </article>
+            } @empty {
+            <div class="sense-resultats" role="status">
+                <p>No s'ha trobat cap element amb aquests criteris.</p>
+            </div>
+            }
+        </div>
+    </div>
+    }
+    }
+    <app-formulari-nou-element />
+    <app-preferits-panel />
+</div>
