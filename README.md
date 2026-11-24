@@ -19,7 +19,7 @@ Projecte Llegito amb Angular del mòdul DA2_OA01. Llegito és una aplicació web
 - code                 : 1.123.0
 
 ## Com crear i executar el projecte
-`npm install` i `ng serve`
+`npm install`, `ng serve`, `npm run api`
 `
 ## Estat del projecte
 Desenvolupament.
@@ -28,3 +28,4 @@ Desenvolupament.
 - *main*        : https://github.com/CristianRomero1234/ioc-angular-projecte-base-cristian-romero/tree/main
 - *ra1-setup*   : https://github.com/CristianRomero1234/ioc-angular-projecte-base-cristian-romero/tree/ra1-setup
 - *ra2-components* : https://github.com/CristianRomero1234/ioc-angular-projecte-base-cristian-romero/tree/ra2-components
+- *ra3-serveis* :  https://github.com/CristianRomero1234/ioc-angular-projecte-base-cristian-romero/tree/ra3-serveis
